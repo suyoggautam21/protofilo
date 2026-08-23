@@ -253,39 +253,227 @@ working on personal projects, and continuously improving my knowledge.
 
 <section id="projects">
 
-<h2 class="title">Projects</h2>
+    <h2 class="title">My Projects</h2>
 
-<div class="projects">
+    <p class="projects-intro">
+        Here are some of the projects I have built while learning
+        programming, artificial intelligence, web development, and engineering.
+        Each project includes an explanation of what it does and how it works.
+    </p>
 
-<div class="card">
-<h3>🌐 Personal Portfolio</h3>
-<p>
-A responsive portfolio website built using HTML and CSS.
-</p>
-</div>
+    <div class="project-list">
 
-<div class="card">
-<h3>🤖 AI Learning</h3>
-<p>
-Learning Python, Machine Learning, and Artificial Intelligence.
-</p>
-</div>
+        <!-- PROJECT 1 -->
+        <div class="project-detail">
 
-<div class="card">
-<h3>🚀 Aerospace Projects</h3>
-<p>
-Working on beginner aerospace simulations and engineering concepts.
-</p>
-</div>
+            <div class="project-header">
+                <div>
+                    <h3>🌐 Personal Portfolio Website</h3>
+                    <span class="project-tech">HTML • CSS • JavaScript</span>
+                </div>
 
-<div class="card">
-<h3>🎮 Game Development</h3>
-<p>
-Creating games with Unity while learning C#.
-</p>
-</div>
+                <span class="project-number">01</span>
+            </div>
 
-</div>
+            <p class="project-description">
+                A personal portfolio website designed to showcase my skills,
+                projects, interests, and journey as a student interested in
+                technology and aerospace engineering.
+            </p>
+
+            <h4>What does it do?</h4>
+
+            <p>
+                The website provides visitors with information about me,
+                my technical skills, the projects I have worked on, and
+                ways to contact me.
+            </p>
+
+            <h4>How does it work?</h4>
+
+            <p>
+                HTML is used to structure the website, CSS controls the
+                design and responsive layout, and JavaScript can be used
+                to add interactive functionality.
+            </p>
+
+            <h4>Code</h4>
+
+            <pre><code>&lt;section class="hero"&gt;
+    &lt;h1&gt;Hello, I'm Suyog Gautam&lt;/h1&gt;
+    &lt;p&gt;Welcome to my portfolio.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+            <div class="project-buttons">
+                <a href="#" class="btn small-btn">View Code</a>
+                <a href="#" class="btn small-btn secondary-btn">Live Demo</a>
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 2 -->
+        <div class="project-detail">
+
+            <div class="project-header">
+                <div>
+                    <h3>🤖 AI / Machine Learning Project</h3>
+                    <span class="project-tech">Python • PyTorch • Machine Learning</span>
+                </div>
+
+                <span class="project-number">02</span>
+            </div>
+
+            <p class="project-description">
+                A machine learning project created while learning the
+                fundamentals of artificial intelligence and neural networks.
+            </p>
+
+            <h4>What does it do?</h4>
+
+            <p>
+                The program takes input data, processes it using a machine
+                learning model, and produces a prediction based on what
+                the model learned during training.
+            </p>
+
+            <h4>How does it work?</h4>
+
+            <p>
+                The Python program prepares the data, creates a model,
+                calculates the error between predictions and expected
+                results, and then uses optimization to improve the model
+                through multiple training iterations.
+            </p>
+
+            <h4>Example Code</h4>
+
+            <pre><code>model = torch.nn.Linear(1, 1)
+
+prediction = model(x)
+
+loss = loss_function(prediction, y)
+
+optimizer.zero_grad()
+loss.backward()
+optimizer.step()</code></pre>
+
+            <div class="project-buttons">
+                <a href="#" class="btn small-btn">View Code</a>
+                <a href="#" class="btn small-btn secondary-btn">Results</a>
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 3 -->
+        <div class="project-detail">
+
+            <div class="project-header">
+                <div>
+                    <h3>🚀 Aerospace Simulation</h3>
+                    <span class="project-tech">Python • Physics • Mathematics</span>
+                </div>
+
+                <span class="project-number">03</span>
+            </div>
+
+            <p class="project-description">
+                A beginner aerospace engineering project focused on
+                understanding how mathematical and physical principles
+                can be applied to flight and space systems.
+            </p>
+
+            <h4>What does it do?</h4>
+
+            <p>
+                The simulation calculates the motion of an object using
+                variables such as velocity, acceleration, time, and gravity.
+            </p>
+
+            <h4>How does it work?</h4>
+
+            <p>
+                The program uses physics equations to calculate the position
+                and velocity of an object over time. By changing the initial
+                conditions, different flight trajectories can be simulated.
+            </p>
+
+            <h4>Example Code</h4>
+
+            <pre><code>velocity = initial_velocity
+position = 0
+
+for time in range(10):
+
+    position += velocity * dt
+
+    velocity += acceleration * dt
+
+print(position)</code></pre>
+
+            <div class="project-buttons">
+                <a href="#" class="btn small-btn">View Code</a>
+                <a href="#" class="btn small-btn secondary-btn">Simulation</a>
+            </div>
+
+        </div>
+
+
+        <!-- PROJECT 4 -->
+        <div class="project-detail">
+
+            <div class="project-header">
+                <div>
+                    <h3>🎮 Unity Game Project</h3>
+                    <span class="project-tech">Unity • C# • Game Development</span>
+                </div>
+
+                <span class="project-number">04</span>
+            </div>
+
+            <p class="project-description">
+                A game development project created using Unity while
+                learning C# programming, game mechanics, physics,
+                and interactive systems.
+            </p>
+
+            <h4>What does it do?</h4>
+
+            <p>
+                The player controls a character inside a game environment
+                and interacts with objects while completing different tasks.
+            </p>
+
+            <h4>How does it work?</h4>
+
+            <p>
+                C# scripts control player movement, interactions, physics,
+                and game logic while Unity handles rendering, collision
+                detection, audio, and the game environment.
+            </p>
+
+            <h4>Example Code</h4>
+
+            <pre><code>void Update()
+{
+    float x = Input.GetAxis("Horizontal");
+    float z = Input.GetAxis("Vertical");
+
+    Vector3 movement =
+        new Vector3(x, 0, z);
+
+    transform.Translate(movement * speed * Time.deltaTime);
+}</code></pre>
+
+            <div class="project-buttons">
+                <a href="#" class="btn small-btn">View Code</a>
+                <a href="#" class="btn small-btn secondary-btn">Play Demo</a>
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
