@@ -1,647 +1,576 @@
+ 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Suyog Gautam | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Suyog Gautam | Portfolio</title>
 
-<style>
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-    font-family:'Poppins',sans-serif;
-}
+    <style>
 
-body{
-    background:#0f172a;
-    color:white;
-}
+        /* =========================
+           RESET
+        ========================= */
 
-header{
-    position:fixed;
-    width:100%;
-    padding:20px 10%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#0f172aee;
-    backdrop-filter:blur(10px);
-    z-index:1000;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
 
-header h2{
-    color:#38bdf8;
-}
 
-nav a{
-    color:white;
-    margin-left:30px;
-    text-decoration:none;
-    transition:.3s;
-}
+        /* =========================
+           BODY
+        ========================= */
 
-nav a:hover{
-    color:#38bdf8;
-}
+        body {
+            background: #0f172a;
+            color: white;
+        }
 
-section{
-    min-height:100vh;
-    padding:120px 10%;
-}
 
-.hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    flex-wrap:wrap;
-}
+        /* =========================
+           HEADER / NAVIGATION
+        ========================= */
 
-.hero-text{
-    max-width:600px;
-}
+        header {
+            position: fixed;
+            width: 100%;
+            padding: 20px 10%;
 
-.hero h1{
-    font-size:60px;
-}
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-.hero h1 span{
-    color:#38bdf8;
-}
+            background: #0f172aee;
+            backdrop-filter: blur(10px);
 
-.hero p{
-    margin:20px 0;
-    line-height:1.8;
-    color:#cbd5e1;
-}
+            z-index: 1000;
+        }
 
-.btn{
-    display:inline-block;
-    padding:14px 28px;
-    background:#38bdf8;
-    color:#0f172a;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:600;
-    transition:.3s;
-}
+        header h2 {
+            color: #38bdf8;
+            font-size: 25px;
+        }
 
-.btn:hover{
-    transform:translateY(-5px);
-}
+        nav a {
+            color: white;
+            margin-left: 30px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
 
-.profile{
-    width:280px;
-    height:280px;
-    border-radius:50%;
-    background:#1e293b;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:100px;
-}
+        nav a:hover {
+            color: #38bdf8;
+        }
 
-.title{
-    font-size:38px;
-    margin-bottom:40px;
-    color:#38bdf8;
-}
 
-.about p{
-    max-width:900px;
-    line-height:1.8;
-    color:#cbd5e1;
-}
+        /* =========================
+           GENERAL SECTION
+        ========================= */
 
-.projects{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
+        section {
+            min-height: 100vh;
+            padding: 120px 10%;
+        }
 
-.projects-intro{
-    max-width:800px;
-    color:#cbd5e1;
-    line-height:1.8;
-    margin-bottom:40px;
-}
 
-.project-list{
-    display:flex;
-    flex-direction:column;
-    gap:35px;
-}
+        /* =========================
+           HERO SECTION
+        ========================= */
 
-.project-detail{
-    background:#1e293b;
-    padding:35px;
-    border-radius:18px;
-    border:1px solid #334155;
-    transition:.3s;
-}
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
 
-.project-detail:hover{
-    transform:translateY(-5px);
-    border-color:#38bdf8;
-}
+        .hero-text {
+            max-width: 650px;
+        }
 
-.project-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    margin-bottom:20px;
-}
+        .hero h1 {
+            font-size: 60px;
+            line-height: 1.2;
+        }
 
-.project-header h3{
-    font-size:26px;
-    margin-bottom:8px;
-}
+        .hero h1 span {
+            color: #38bdf8;
+        }
 
-.project-number{
-    font-size:35px;
-    font-weight:700;
-    color:#334155;
-}
+        .hero p {
+            margin: 25px 0;
+            line-height: 1.8;
+            color: #cbd5e1;
+            font-size: 17px;
+        }
 
-.project-tech{
-    color:#38bdf8;
-    font-size:14px;
-}
 
-.project-detail h4{
-    color:#38bdf8;
-    margin-top:25px;
-    margin-bottom:10px;
-}
+        /* =========================
+           BUTTON
+        ========================= */
 
-.project-detail p{
-    color:#cbd5e1;
-    line-height:1.8;
-}
+        .btn {
+            display: inline-block;
 
-.project-description{
-    font-size:17px;
-}
+            padding: 14px 28px;
 
-.project-detail pre{
-    background:#020617;
-    padding:20px;
-    border-radius:10px;
-    overflow-x:auto;
-    margin-top:15px;
-    border:1px solid #334155;
-}
+            background: #38bdf8;
+            color: #0f172a;
 
-.project-detail code{
-    color:#cbd5e1;
-    font-family:monospace;
-    line-height:1.7;
-}
+            text-decoration: none;
 
-.project-buttons{
-    display:flex;
-    gap:15px;
-    margin-top:25px;
-    flex-wrap:wrap;
-}
+            border-radius: 30px;
 
-.small-btn{
-    padding:10px 20px;
-    font-size:14px;
-}
+            font-weight: 600;
 
-.secondary-btn{
-    background:transparent;
-    color:#38bdf8;
-    border:1px solid #38bdf8;
-}
+            transition: 0.3s;
+        }
 
-.secondary-btn:hover{
-    background:#38bdf8;
-    color:#0f172a;
-}
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px #38bdf855;
+        }
 
-@media(max-width:600px){
 
-    .project-detail{
-        padding:25px;
-    }
+        /* =========================
+           PROFILE CIRCLE
+        ========================= */
 
-    .project-header h3{
-        font-size:21px;
-    }
+        .profile {
+            width: 280px;
+            height: 280px;
 
-    .project-number{
-        font-size:25px;
-    }
+            border-radius: 50%;
 
-    .project-detail pre{
-        font-size:12px;
-    }
+            background: #1e293b;
 
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-.card{
-    background:#1e293b;
-    padding:30px;
-    border-radius:15px;
-    transition:.3s;
-}
+            font-size: 100px;
 
-.card:hover{
-    transform:translateY(-10px);
-}
+            border: 3px solid #38bdf8;
 
-.card h3{
-    margin-bottom:15px;
-}
+            box-shadow: 0 0 40px #38bdf833;
+        }
 
-.card p{
-    color:#cbd5e1;
-}
 
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
-}
+        /* =========================
+           SECTION TITLES
+        ========================= */
 
-.skill{
-    background:#1e293b;
-    padding:12px 22px;
-    border-radius:30px;
-}
+        .title {
+            font-size: 38px;
+            margin-bottom: 40px;
+            color: #38bdf8;
+        }
 
-.contact{
-    text-align:center;
-}
 
-.contact p{
-    margin:20px 0;
-    color:#cbd5e1;
-}
+        /* =========================
+           ABOUT
+        ========================= */
 
-footer{
-    padding:30px;
-    text-align:center;
-    background:#020617;
-    color:#94a3b8;
-}
+        .about p {
+            max-width: 900px;
 
-@media(max-width:900px){
+            line-height: 1.8;
 
-.hero{
-    flex-direction:column-reverse;
-    text-align:center;
-}
+            color: #cbd5e1;
 
-.hero h1{
-    font-size:45px;
-}
+            font-size: 17px;
+        }
 
-.profile{
-    margin-bottom:40px;
-}
 
-}
+        /* =========================
+           PROJECT PREVIEW
+        ========================= */
 
-</style>
+        .project-preview {
+            max-width: 900px;
+
+            background: #1e293b;
+
+            padding: 40px;
+
+            border-radius: 20px;
+
+            border: 1px solid #334155;
+        }
+
+        .project-preview h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .project-preview p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #1e293b;
+
+            padding: 12px 22px;
+
+            border-radius: 30px;
+
+            border: 1px solid #334155;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            border-color: #38bdf8;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 20px 0;
+
+            color: #cbd5e1;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 30px;
+
+            text-align: center;
+
+            background: #020617;
+
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                padding: 20px 5%;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .profile {
+                margin-bottom: 30px;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            header {
+                position: relative;
+
+                flex-direction: column;
+
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            section {
+                padding: 100px 7%;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .profile {
+                width: 220px;
+                height: 220px;
+                font-size: 75px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<header>
 
-<h2>Suyog.</h2>
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-</nav>
+    <header>
 
-</header>
+        <h2>Suyog.</h2>
 
-<section class="hero" id="home">
+        <nav>
 
-<div class="hero-text">
+            <a href="#home">Home</a>
 
-<h1>Hello, I'm <span>Suyog Gautam</span></h1>
+            <a href="#about">About</a>
 
-<p>
-I'm a Class 12 student from Nepal who loves programming,
-web development, artificial intelligence, aerospace engineering,
-and building creative projects.
-My dream is to study Aerospace Engineering in the United States
-and contribute to future space exploration.
-</p>
+            <a href="#projects">Projects</a>
 
-<a href="#projects" class="btn">View Projects</a>
+            <a href="#skills">Skills</a>
 
-</div>
+            <a href="#contact">Contact</a>
 
-<div class="profile">
-👨‍💻
-</div>
+        </nav>
 
-</section>
+    </header>
 
-<section id="about">
 
-<h2 class="title">About Me</h2>
 
-<div class="about">
+    <!-- =========================
+         HOME
+    ========================== -->
 
-<p>
+    <section class="hero" id="home">
 
-I'm passionate about technology and enjoy learning new skills every day.
-My interests include AI, robotics, Python programming, website development,
-Blender, Unity, and aerospace engineering.
+        <div class="hero-text">
 
-Besides coding, I enjoy creating digital designs, editing videos,
-working on personal projects, and continuously improving my knowledge.
-
-</p>
-
-</div>
-
-</section>
-
-<section id="projects">
-
-    <h2 class="title">My Projects</h2>
-
-    <p class="projects-intro">
-        Here are some of the projects I have built while learning
-        programming, artificial intelligence, web development, and engineering.
-        Each project includes an explanation of what it does and how it works.
-    </p>
-
-    <div class="project-list">
-
-        <!-- PROJECT 1 -->
-        <div class="project-detail">
-
-            <div class="project-header">
-                <div>
-                    <h3>🌐 Personal Portfolio Website</h3>
-                    <span class="project-tech">HTML • CSS • JavaScript</span>
-                </div>
-
-                <span class="project-number">01</span>
-            </div>
-
-            <p class="project-description">
-                A personal portfolio website designed to showcase my skills,
-                projects, interests, and journey as a student interested in
-                technology and aerospace engineering.
-            </p>
-
-            <h4>What does it do?</h4>
+            <h1>
+                Hello, I'm
+                <span>Suyog Gautam</span>
+            </h1>
 
             <p>
-                The website provides visitors with information about me,
-                my technical skills, the projects I have worked on, and
-                ways to contact me.
+                I'm a student from Nepal passionate about programming,
+                web development, artificial intelligence, aerospace
+                engineering, and building creative projects.
             </p>
-
-            <h4>How does it work?</h4>
 
             <p>
-                HTML is used to structure the website, CSS controls the
-                design and responsive layout, and JavaScript can be used
-                to add interactive functionality.
+                My goal is to study Aerospace Engineering and use
+                technology to contribute to the future of space
+                exploration.
             </p>
 
-            <h4>Code</h4>
 
-            <pre><code>&lt;section class="hero"&gt;
-    &lt;h1&gt;Hello, I'm Suyog Gautam&lt;/h1&gt;
-    &lt;p&gt;Welcome to my portfolio.&lt;/p&gt;
-&lt;/section&gt;</code></pre>
-
-            <div class="project-buttons">
-                <a href="#" class="btn small-btn">View Code</a>
-                <a href="#" class="btn small-btn secondary-btn">Live Demo</a>
-            </div>
-
+            <!-- GO TO PROJECTS PAGE -->
         </div>
 
 
-        <!-- PROJECT 2 -->
-        <div class="project-detail">
+        <div class="profile">
+            👨‍💻
+        </div>
 
-            <div class="project-header">
-                <div>
-                    <h3>🤖 AI / Machine Learning Project</h3>
-                    <span class="project-tech">Python • PyTorch • Machine Learning</span>
-                </div>
+    </section>
 
-                <span class="project-number">02</span>
-            </div>
 
-            <p class="project-description">
-                A machine learning project created while learning the
-                fundamentals of artificial intelligence and neural networks.
-            </p>
 
-            <h4>What does it do?</h4>
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
-            <p>
-                The program takes input data, processes it using a machine
-                learning model, and produces a prediction based on what
-                the model learned during training.
-            </p>
+    <section id="about">
 
-            <h4>How does it work?</h4>
+        <h2 class="title">
+            About Me
+        </h2>
+
+        <div class="about">
 
             <p>
-                The Python program prepares the data, creates a model,
-                calculates the error between predictions and expected
-                results, and then uses optimization to improve the model
-                through multiple training iterations.
+                I'm passionate about technology and enjoy learning
+                new skills every day.
+
+                My interests include artificial intelligence,
+                Python programming, web development, Blender,
+                Unity, robotics, and aerospace engineering.
+
+                Besides coding, I enjoy creating digital designs,
+                editing videos, working on personal projects,
+                and continuously improving my technical knowledge.
             </p>
-
-            <h4>Example Code</h4>
-
-            <pre><code>model = torch.nn.Linear(1, 1)
-
-prediction = model(x)
-
-loss = loss_function(prediction, y)
-
-optimizer.zero_grad()
-loss.backward()
-optimizer.step()</code></pre>
-
-            <div class="project-buttons">
-                <a href="#" class="btn small-btn">View Code</a>
-                <a href="#" class="btn small-btn secondary-btn">Results</a>
-            </div>
 
         </div>
 
+    </section>
 
-        <!-- PROJECT 3 -->
-        <div class="project-detail">
 
-            <div class="project-header">
-                <div>
-                    <h3>🚀 Aerospace Simulation</h3>
-                    <span class="project-tech">Python • Physics • Mathematics</span>
-                </div>
 
-                <span class="project-number">03</span>
-            </div>
+    <!-- =========================
+         PROJECT PREVIEW
+    ========================== -->
 
-            <p class="project-description">
-                A beginner aerospace engineering project focused on
-                understanding how mathematical and physical principles
-                can be applied to flight and space systems.
-            </p>
+    <section id="projects">
 
-            <h4>What does it do?</h4>
+        <h2 class="title">
+            Projects
+        </h2>
 
-            <p>
-                The simulation calculates the motion of an object using
-                variables such as velocity, acceleration, time, and gravity.
-            </p>
+        <div class="project-preview">
 
-            <h4>How does it work?</h4>
+            <h3>
+                🚀 Explore My Projects
+            </h3>
 
             <p>
-                The program uses physics equations to calculate the position
-                and velocity of an object over time. By changing the initial
-                conditions, different flight trajectories can be simulated.
+                I build projects to apply what I learn in programming,
+                artificial intelligence, engineering, and game development.
+
+                You can explore my projects, see how they work,
+                read about the technologies I used, and view my
+                source code.
             </p>
 
-            <h4>Example Code</h4>
-
-            <pre><code>velocity = initial_velocity
-position = 0
-
-for time in range(10):
-
-    position += velocity * dt
-
-    velocity += acceleration * dt
-
-print(position)</code></pre>
-
-            <div class="project-buttons">
-                <a href="#" class="btn small-btn">View Code</a>
-                <a href="#" class="btn small-btn secondary-btn">Simulation</a>
-            </div>
+            <a href="projects.html" class="btn">
+                Explore All Projects →
+            </a>
 
         </div>
 
+    </section>
 
-        <!-- PROJECT 4 -->
-        <div class="project-detail">
 
-            <div class="project-header">
-                <div>
-                    <h3>🎮 Unity Game Project</h3>
-                    <span class="project-tech">Unity • C# • Game Development</span>
-                </div>
 
-                <span class="project-number">04</span>
-            </div>
+    <!-- =========================
+         SKILLS
+    ========================== -->
 
-            <p class="project-description">
-                A game development project created using Unity while
-                learning C# programming, game mechanics, physics,
-                and interactive systems.
-            </p>
+    <section id="skills">
 
-            <h4>What does it do?</h4>
+        <h2 class="title">
+            Skills
+        </h2>
 
-            <p>
-                The player controls a character inside a game environment
-                and interacts with objects while completing different tasks.
-            </p>
+        <div class="skills">
 
-            <h4>How does it work?</h4>
+            <div class="skill">HTML</div>
 
-            <p>
-                C# scripts control player movement, interactions, physics,
-                and game logic while Unity handles rendering, collision
-                detection, audio, and the game environment.
-            </p>
+            <div class="skill">CSS</div>
 
-            <h4>Example Code</h4>
+            <div class="skill">JavaScript</div>
 
-            <pre><code>void Update()
-{
-    float x = Input.GetAxis("Horizontal");
-    float z = Input.GetAxis("Vertical");
+            <div class="skill">Python</div>
 
-    Vector3 movement =
-        new Vector3(x, 0, z);
+            <div class="skill">C</div>
 
-    transform.Translate(movement * speed * Time.deltaTime);
-}</code></pre>
+            <div class="skill">C#</div>
 
-            <div class="project-buttons">
-                <a href="#" class="btn small-btn">View Code</a>
-                <a href="#" class="btn small-btn secondary-btn">Play Demo</a>
-            </div>
+            <div class="skill">AI</div>
+
+            <div class="skill">Machine Learning</div>
+
+            <div class="skill">Git</div>
+
+            <div class="skill">GitHub</div>
+
+            <div class="skill">Blender</div>
+
+            <div class="skill">Unity</div>
+
+            <div class="skill">Problem Solving</div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
 
-<section id="skills">
 
-<h2 class="title">Skills</h2>
+    <!-- =========================
+         CONTACT
+    ========================== -->
 
-<div class="skills">
+    <section id="contact">
 
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">JavaScript</div>
-<div class="skill">Python</div>
-<div class="skill">AI</div>
-<div class="skill">Git</div>
-<div class="skill">Blender</div>
-<div class="skill">Unity</div>
-<div class="skill">Problem Solving</div>
+        <h2 class="title">
+            Contact
+        </h2>
 
-</div>
+        <div class="contact">
 
-</section>
+            <p>
+                Interested in collaborating or just want to say hello?
+            </p>
 
-<section id="contact">
+            <a
+                href="mailto:your@email.com"
+                class="btn"
+            >
+                Contact Me
+            </a>
 
-<h2 class="title">Contact</h2>
+        </div>
 
-<div class="contact">
+    </section>
 
-<p>
-Interested in collaborating or just want to say hello?
-</p>
 
-<a href="mailto:your@email.com" class="btn">
-Contact Me
-</a>
 
-</div>
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-</section>
+    <footer>
 
-<footer>
+        © 2026 Suyog Gautam • Built with HTML & CSS
 
-© 2026 Suyog Gautam • Built with HTML & CSS
+    </footer>
 
-</footer>
 
 </body>
+
 </html>
+
