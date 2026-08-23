@@ -1,0 +1,941 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>C Projects | Suyog Gautam</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            padding: 20px 10%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: #0f172aee;
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid #1e293b;
+
+            z-index: 1000;
+        }
+
+        header h2 {
+            color: #38bdf8;
+            font-size: 25px;
+        }
+
+        nav a {
+            color: white;
+
+            margin-left: 30px;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+            padding: 140px 10% 80px;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .page-title h1 {
+            font-size: 50px;
+        }
+
+        .page-title h1 span {
+            color: #38bdf8;
+        }
+
+        .page-title p {
+            max-width: 750px;
+
+            margin: 20px auto;
+
+            color: #cbd5e1;
+
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back-button {
+            display: inline-block;
+
+            margin-bottom: 40px;
+
+            color: #38bdf8;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+
+
+        /* =========================
+           PROJECT GRID
+        ========================= */
+
+        .projects {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
+
+            gap: 25px;
+        }
+
+
+        /* =========================
+           PROJECT CARD
+        ========================= */
+
+        .project-card {
+            background: #1e293b;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            border: 1px solid #334155;
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+
+            border-color: #38bdf8;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .project-number {
+            color: #38bdf8;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin-bottom: 10px;
+        }
+
+        .project-card h2 {
+            font-size: 24px;
+
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #cbd5e1;
+
+            line-height: 1.7;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           TAG
+        ========================= */
+
+        .tag {
+            display: inline-block;
+
+            width: fit-content;
+
+            padding: 6px 14px;
+
+            border-radius: 20px;
+
+            background: #0f172a;
+
+            color: #38bdf8;
+
+            border: 1px solid #334155;
+
+            font-size: 13px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buttons {
+            margin-top: auto;
+
+            display: flex;
+
+            gap: 10px;
+
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 10px 18px;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .code-btn {
+            background: #38bdf8;
+
+            color: #0f172a;
+        }
+
+        .code-btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow: 0 8px 20px #38bdf855;
+        }
+
+        .details-btn {
+            color: #38bdf8;
+
+            border: 1px solid #38bdf8;
+
+            background: transparent;
+        }
+
+        .details-btn:hover {
+            background: #38bdf8;
+
+            color: #0f172a;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 30px;
+
+            text-align: center;
+
+            background: #020617;
+
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 18px 5%;
+            }
+
+            header h2 {
+                font-size: 20px;
+            }
+
+            nav a {
+                margin-left: 10px;
+
+                font-size: 13px;
+            }
+
+            main {
+                padding: 120px 7% 60px;
+            }
+
+            .page-title h1 {
+                font-size: 38px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header>
+
+        <h2>Suyog.</h2>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="index.html#about">About</a>
+
+            <a href="projects.html">Projects</a>
+
+            <a href="index.html#skills">Skills</a>
+
+            <a href="index.html#contact">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================= -->
+
+    <main>
+
+        <a href="index.html" class="back-button">
+            ← Back to Home
+        </a>
+
+
+        <!-- PAGE TITLE -->
+
+        <div class="page-title">
+
+            <h1>
+                My <span>C Projects</span>
+            </h1>
+
+            <p>
+                A collection of projects I completed while learning
+                C programming and computer science through CS50.
+                Each project helped me develop my understanding of
+                algorithms, data structures, memory, and problem solving.
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================
+             PROJECTS
+        ========================= -->
+
+        <div class="projects">
+
+
+            <!-- GAME -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 01
+                </div>
+
+                <h2>🎮 Game</h2>
+
+                <span class="tag">
+                    Scratch • Game Development
+                </span>
+
+                <p>
+                    A game made by Me as a assignment for CS50x course.
+		    In this game I used in-built commands to develop a simple 
+		    game. Here we have to use "AD" key and space to land the spaceship
+		    in the landing pad.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://scratch.mit.edu/projects/1367465917"
+                        target="_blank"
+                        class="btn code-btn"
+                    >
+                        View Code
+                    </a>
+
+                    <a href="#" class="btn details-btn">
+                        Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CREDIT -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 02
+                </div>
+
+                <h2>💳 Credit</h2>
+
+                <span class="tag">
+                    C • Algorithms
+                </span>
+
+                <p>
+                    A program that determines whether a credit card
+                    number is valid using a checksum algorithm.
+                    This project introduced algorithmic thinking and
+                    numerical manipulation in C.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://github.com/suyoggautam21/CS50x-Assignments/tree/main/CS50x%20Problem%20sets/credit/credit.c"
+                        target="_blank"
+                        class="btn code-btn"
+                    >
+                        View Code
+                    </a>
+
+                    <a href="#" class="btn details-btn">
+                        Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FILTER -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 03
+                </div>
+
+                <h2>🖼️ Filter Less</h2>
+
+                <span class="tag">
+                    C • Image Processing
+                </span>
+
+                <p>
+                    An image processing project written in C.
+                    The program applies different filters to bitmap
+                    images by manipulating individual pixels.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://github.com/suyoggautam21/CS50x-Assignments/tree/main/CS50x%20Problem%20sets/filter-less/filter-less.c"
+                        target="_blank"
+                        class="btn code-btn"
+                    >
+                        View Code
+                    </a>
+
+                    <a href="#" class="btn details-btn">
+                        Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HELLO -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 04
+                </div>
+
+                <h2>👋 Hello</h2>
+
+                <span class="tag">
+                    C • Basics
+                </span>
+
+                <p>
+                    One of my introductory C programs.
+                    This project helped me understand basic syntax,
+                    input, output, variables, and program structure.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://github.com/suyoggautam21/CS50x-Assignments/tree/main/CS50x%20Problem%20sets/hello/hello.c"
+                        target="_blank"
+                        class="btn code-btn"
+                    >
+                        View Code
+                    </a>
+
+                    <a href="#" class="btn details-btn">
+                        Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INHERITANCE -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 05
+                </div>
+
+                <h2>🧬 Inheritance</h2>
+
+                <span class="tag">
+                    C • Algorithms
+                </span>
+
+                <p>
+                    A program that simulates the inheritance of
+                    genetic traits across multiple generations.
+                    It uses structures, pointers, and dynamic memory.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://github.com/suyoggautam21/CS50x-Assignments/tree/main/CS50x%20Problem%20sets/inheritance/inheritance.c"
+                        target="_blank"
+                        class="btn code-btn"
+                    >
+                        View Code
+                    </a>
+
+                    <a href="#" class="btn details-btn">
+                        Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MARIO -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 06
+                </div>
+
+                <h2>🍄 Mario More</h2>
+
+                <span class="tag">
+                    C • Loops
+                </span>
+
+                <p>
+                    A program that creates a Mario-style pyramid
+                    using loops and user input. It helped me understand
+                    nested loops and program control flow.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://github.com/suyoggautam21/CS50x-Assignments/tree/main/CS50x%20Problem%20sets/mario-more/mario-more.c"
+                        target="_blank"
+                        class="btn code-btn"
+                    >
+                        View Code
+                    </a>
+
+                    <a href="#" class="btn details-btn">
+                        Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PLURALITY -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 07
+                </div>
+
+                <h2>🗳️ Plurality</h2>
+
+                <span class="tag">
+                    C • Voting Algorithm
+                </span>
+
+                <p>
+                    A voting program that determines the winner
+                    using a plurality voting system. It helped me
+                    practice arrays, strings, loops, and algorithms.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://github.com/suyoggautam21/CS50x-Assignments/tree/main/CS50x%20Problem%20sets/plurality/plurality.c"
+                        target="_blank"
+                        class="btn code-btn"
+                    >
+                        View Code
+                    </a>
+
+                    <a href="#" class="btn details-btn">
+                        Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- READABILITY -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 08
+                </div>
+
+                <h2>📖 Readability</h2>
+
+                <span class="tag">
+                    C • Text Analysis
+                </span>
+
+                <p>
+                    A program that analyzes text and calculates its
+                    approximate reading grade level using mathematical
+                    formulas based on letters, words, and sentences.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://github.com/suyoggautam21/CS50x-Assignments/tree/main/CS50x%20Problem%20sets/readability/readability.c"
+                        target="_blank"
+                        class="btn code-btn"
+                    >
+                        View Code
+                    </a>
+
+                    <a href="#" class="btn details-btn">
+                        Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SCRABBLE -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 09
+                </div>
+
+                <h2>🔤 Scrabble</h2>
+
+                <span class="tag">
+                    C • Strings • Arrays
+                </span>
+
+                <p>
+                    A program that calculates the score of words
+                    using Scrabble letter values. This project focuses
+                    on arrays, strings, loops, and functions.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://github.com/suyoggautam21/CS50x-Assignments/tree/main/CS50x%20Problem%20sets/scrabble/scrabble.c"
+                        target="_blank"
+                        class="btn code-btn"
+                    >
+                        View Code
+                    </a>
+
+                    <a href="#" class="btn details-btn">
+                        Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SPELLER -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 10
+                </div>
+
+                <h2>📚 Speller</h2>
+
+                <span class="tag">
+                    C • Hash Tables • Data Structures
+                </span>
+
+                <p>
+                    A spell-checking program that loads a dictionary
+                    into memory and checks whether words in a text
+                    are spelled correctly. This project focuses on
+                    hash tables, pointers, and memory management.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://github.com/suyoggautam21/CS50x-Assignments/tree/main/CS50x%20Problem%20sets/speller/sp"
+                        target="_blank"
+                        class="btn code-btn"
+                    >
+                        View Code
+                    </a>
+
+                    <a href="#" class="btn details-btn">
+                        Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SUBSTITUTION -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 11
+                </div>
+
+                <h2>🔐 Substitution</h2>
+
+                <span class="tag">
+                    C • Cryptography
+                </span>
+
+                <p>
+                    An encryption program that uses a substitution
+                    cipher to transform plaintext into ciphertext
+                    using a custom key.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://github.com/suyoggautam21/CS50x-Assignments/tree/main/CS50x%20Problem%20sets/substitution/substitution.c"
+                        target="_blank"
+                        class="btn code-btn"
+                    >
+                        View Code
+                    </a>
+
+                    <a href="#" class="btn details-btn">
+                        Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TIDEMAN -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 12
+                </div>
+
+                <h2>🗳️ Tideman</h2>
+
+                <span class="tag">
+                    C • Graph Algorithms
+                </span>
+
+                <p>
+                    An implementation of the Tideman ranked-choice
+                    voting system. The project uses preferences,
+                    pairs, graphs, and algorithms to determine
+                    an election winner.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://github.com/suyoggautam21/CS50x-Assignments/tree/main/CS50x%20Problem%20sets/tideman/tideman.c"
+                        target="_blank"
+                        class="btn code-btn"
+                    >
+                        View Code
+                    </a>
+
+                    <a href="#" class="btn details-btn">
+                        Details
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VOLUME -->
+
+            <div class="project-card">
+
+                <div class="project-number">
+                    PROJECT 13
+                </div>
+
+                <h2>🔊 Volume</h2>
+
+                <span class="tag">
+                    C • Audio Processing
+                </span>
+
+                <p>
+                    An audio processing program that modifies the
+                    volume of WAV audio files by reading and changing
+                    individual audio samples.
+                </p>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://github.com/suyoggautam21/CS50x-Assignments/tree/main/CS50x%20Problem%20sets/volume/volume.c"
+                        target="_blank"
+                        class="btn code-btn"
+                    >
+                        View Code
+                    </a>
+
+                    <a href="#" class="btn details-btn">
+                        Details
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        © 2026 Suyog Gautam • C / CS50 Projects
+
+    </footer>
+
+
+</body>
+
+</html>
